@@ -2,7 +2,7 @@
 
 :root{
     --white-text: #fff;
-    --blue-color: rgb(5, 136, 211);
+    --blue-color: rgb(14, 147, 224);
 }
 
 *{
@@ -24,7 +24,7 @@ body{
     padding: 16px;
     color: var(--white-text);
     display: grid;
-    grid-template-rows: 5% 45% 50%;
+    grid-template-rows: 5% 30% 65%;
     gap: 32px;
 }
 
@@ -46,13 +46,6 @@ svg{
 .sidebar-header p{
     font-size: 1.6rem;
     font-weight: 600;
-}
-
-.links{
-    grid-row: 2 / 3;
-}
-.account-links{
-    grid-row: 3 / 4;
 }
 
 .links, .account-links{
@@ -87,20 +80,42 @@ svg{
     z-index: 1;
 }
 
+.search-area{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.5fr 8fr 0.5fr 0.5fr 1.5fr;
+    padding: 12px;
+    gap: 18px;
+}
+
 .search-area svg{
-    width: 10%;
+    width: 40%;
     fill: black;
+    justify-self: end;
+}
+
+.search-area svg:hover{
+    cursor: pointer;
+}
+
+.search-area input{
+    height: 30px;
+    width: 75%;
+    align-self: center;
+    background-color: rgba(224, 224, 224, 0.356);
+    border-radius: 20px;
+    border: none;
 }
 
 .pfp{
-    width: 50px;
+    max-width: 40px;
     height: auto;
     border-radius: 50%;
-
 }
 
+
 .pfp-large{
-    width: 70px;
+    max-width: 60px;
     height: auto;
     border-radius: 50%;
 }
