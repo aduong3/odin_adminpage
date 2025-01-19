@@ -1,18 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root{
-    
-}
-
-
-@font-face{
-    font-family: NorseBold;
-    src: url(./fonts/Norse-Bold.otf);
+    --white-text: #fff;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'NorseBold', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -24,16 +20,66 @@ body{
 .sidebar {
     background-color: blue;
     grid-column: 1 / 2;
+    padding: 16px;
+    color: var(--white-text);
+    display: grid;
+    grid-template-rows: 5% 40% 45%;
+    gap: 32px;
+}
+
+svg{
+    fill: var(--white-text);
+}
+
+.sidebar-header{
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sidebar-header > svg{
+    width: 18%;
+}
+
+.sidebar-header p{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.links{
+    grid-row: 2 / 3;
+}
+.account-links{
+    grid-row: 3 / 4;
+}
+
+.links, .account-links{
+    display: grid;
+
+}
+
+.links svg, .account-links svg{
+    width: 10%;
+}
+
+.links a, .account-links a{
+    color: var(--white-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
 
 .right-side{
     grid-column: 2 / 3;
-
     display: grid;
     grid-template-rows: 1fr 4fr;
 }
 
-.header{
+.right-side .header{
     background-color: grey;
     grid-row: 1 / 2;
 }
