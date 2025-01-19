@@ -78,20 +78,28 @@ svg{
     grid-row: 1 / 2;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.055);
     z-index: 1;
+    display: grid;
 }
 
 .search-area{
     display: grid;
     align-items: center;
     grid-template-columns: 0.5fr 8fr 0.5fr 0.5fr 1.5fr;
-    padding: 12px;
+    padding: 12px 12px 0 12px;
     gap: 18px;
 }
 
 .search-area svg{
     width: 40%;
     fill: black;
+}
+
+.magnify{
     justify-self: end;
+}
+
+.bell{
+    justify-self: center;
 }
 
 .search-area svg:hover{
@@ -100,11 +108,12 @@ svg{
 
 .search-area input{
     height: 30px;
-    width: 75%;
+    width: 80%;
     align-self: center;
     background-color: rgba(224, 224, 224, 0.356);
     border-radius: 20px;
     border: none;
+    padding: 8px;
 }
 
 .pfp{
@@ -118,6 +127,42 @@ svg{
     max-width: 60px;
     height: auto;
     border-radius: 50%;
+    justify-self: end;
+}
+
+.name{
+    font-weight: bold;
+}
+
+.welcome-section{
+    display: grid;
+    grid-template-columns: 0.35fr 3fr 0.5fr 0.5fr 0.5fr;
+    gap: 14px;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.welcome-section p{
+    font-weight: bold;
+}
+
+.hello{
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.name-greet{
+    font-size: 1.2rem;
+}
+
+.welcome-section button{
+    background-color: var(--blue-color);
+    color: var(--white-text);
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    max-width: 100px;
+    height: 38px;
 }
 
 
