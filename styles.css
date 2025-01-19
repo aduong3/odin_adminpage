@@ -1,0 +1,44 @@
+:root{
+    
+}
+
+
+@font-face{
+    font-family: NorseBold;
+    src: url(./fonts/Norse-Bold.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NorseBold', Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.sidebar {
+    background-color: blue;
+    grid-column: 1 / 2;
+}
+
+.right-side{
+    grid-column: 2 / 3;
+
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+
+.header{
+    background-color: grey;
+    grid-row: 1 / 2;
+}
+
+.main-content{
+    background-color: red;
+    grid-row: 2 / 3;
+}
