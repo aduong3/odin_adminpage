@@ -24,7 +24,7 @@ body{
     padding: 16px;
     color: var(--white-text);
     display: grid;
-    grid-template-rows: 5% 30% 65%;
+    grid-template-rows: 5% 30% auto;
     gap: 32px;
 }
 
@@ -76,7 +76,7 @@ svg{
 .right-side .header{
     background-color: var(--white-text);
     grid-row: 1 / 2;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.055);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.137);
     z-index: 1;
     display: grid;
 }
@@ -167,6 +167,53 @@ svg{
 
 
 .main-content{
+    padding: 30px;
     background-color: rgb(247, 247, 247);
     grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 24px;
+}
+
+.left{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.15fr 1fr 1fr 1fr;
+    gap: 18px;
+
+}
+
+.left h3{
+    grid-column: span 2;
+}
+
+.card{
+    background-color: #fff;
+    padding: 32px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.075);
+    border-radius: 8px;
+
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 1fr;
+}
+
+.card h4{
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+.card p{
+    color:#acabab;
+    max-width: 50ch;
+}
+.card-icons{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 24px;
+}
+
+.card-icons svg{
+    width: 6%;
+    fill: black;
 }
