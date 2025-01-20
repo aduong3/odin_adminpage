@@ -24,8 +24,8 @@ body {
   grid-column: 1 / 2;
   padding: 16px;
   color: var(--white-text);
-  display: grid;
-  grid-template-rows: 5% 30% auto;
+  display: inline-grid;
+  grid-template-rows: 5% 30% 30%;
   gap: 32px;
 }
 
@@ -71,12 +71,6 @@ svg {
   gap: 24px;
 }
 
-.right-side {
-  grid-column: 2 / 3;
-  display: grid;
-  grid-template-rows: 1fr 4fr;
-}
-
 .right-side .header {
   background-color: var(--white-text);
   grid-row: 1 / 2;
@@ -89,7 +83,7 @@ svg {
   display: grid;
   align-items: center;
   grid-template-columns: 0.5fr 8fr 0.5fr 0.5fr 1.5fr;
-  padding: 12px 12px 0 12px;
+  padding: 0 12px;
   gap: 18px;
 }
 
@@ -104,10 +98,6 @@ svg {
 
 .bell {
   justify-self: center;
-}
-
-.search-area svg:hover {
-  cursor: pointer;
 }
 
 .search-area input {
@@ -169,13 +159,12 @@ svg {
 }
 
 .main-content {
-  padding: 30px;
+  padding: 18px 30px;
   background-color: rgb(247, 247, 247);
   grid-row: 2 / 3;
-
   display: grid;
-  grid-template-columns: 2.5fr 1fr;
-  gap: 24px;
+  grid-template-columns: 3fr 0.9fr;
+  gap: 18px;
 }
 
 .left {
@@ -195,7 +184,7 @@ svg {
   border-radius: 8px;
   display: grid;
   grid-template-columns: 8px 1fr;
-  gap: 14px;
+  gap: 18px;
 }
 
 .highlight {
@@ -214,7 +203,8 @@ svg {
   margin-bottom: 8px;
 }
 .card p,
-.announcements p {
+.announcements p,
+.person > div p:last-child {
   color: #7e7e7e;
   max-width: 50ch;
 }
@@ -230,7 +220,8 @@ svg {
   fill: black;
 }
 
-.announcements {
+.announcements,
+.trending {
   background-color: #fff;
   box-shadow: var(--box-shadow);
   padding: 30px;
@@ -240,16 +231,31 @@ svg {
   gap: 24px;
 }
 
-hr{
-    border-color:#7e7e7e28;
+hr {
+  border-color: #7e7e7e28;
 }
 
-.right{
-    display: grid;
-    grid-template-rows: 0.1fr 0.35fr 0.1fr 0.4fr;
-    gap: 18px;
+.right {
+  display: grid;
+  grid-template-rows: 0.1fr 0.35fr 0.1fr 0.4fr;
+  gap: 18px;
 }
 
-.trending{
-    background-color: #fff;
+.trending {
+  background-color: #fff;
+  display: grid;
+}
+
+.person {
+  display: flex;
+  gap: 20px;
+}
+.person:hover,
+.search-area svg:hover,
+button:hover {
+  cursor: pointer;
+}
+
+.person:hover {
+  background-color: rgba(14, 147, 224, 0.137);
 }
